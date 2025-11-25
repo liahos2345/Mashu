@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayúdame a encontrar a mi gato Mashu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo" data-i18n="logo">Ayúdame a encontrar a mi gato Mashu</h1>
+      <nav aria-label="primary">
+        <button class="btn ghost" id="share-hero" data-i18n="share_hero">Compartir</button>
+        <button class="btn" id="lang-toggle" aria-label="Toggle language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+            <h2 data-i18n="hero_heading">Ayúdame a encontrar a mi gato Mashu</h2>
+            <div class="hero-ctas">
+              <a class="btn large" href="#cards" data-i18n="view_reports">Fotos de Mashu</a>
+              <button class="btn large" id="cat-history" data-i18n="cat_history">Historia de mi gato</button>
+            </div>
+          </div>
+        <div class="hero-art">
+          <div class="cat-illustration" aria-hidden="true">
+              <img src="images/Image (2).jfif" alt="Mashu photo 3" />
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards" class="cards-section container">
+      <h3 class="section-title" data-i18n="section_recent_reports">Fotos de Mashu</h3>
+      <div class="carousel-card">
+        <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Cats carousel">
+          <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+          <div class="slides-wrapper">
+            <div class="slides">
+              <figure class="slide" data-name="Mochi" data-location="Maple St, Downtown">
+                <img src="images/Image (1).jfif" alt="Mochi - gris"/>
+                <figcaption></figcaption>
+              </figure>
+
+              <figure class="slide" data-name="Luna" data-location="Westbrook Park">
+                <img src="images/Image (2).jfif" alt="Luna - naranja"/>
+                <figcaption></figcaption>
+              </figure>
+
+              <figure class="slide" data-name="Simba" data-location="3rd Ave & Pine">
+                <img src="images/Image (3).jfif" alt="Simba - negro"/>
+                <figcaption></figcaption>
+              </figure>
+
+              <figure class="slide" data-name="Cleo" data-location="Riverside" >
+                <img src="images/Image (4).jfif" alt="Cleo - carey"/>
+                <figcaption></figcaption>
+              </figure>
+
+              <figure class="slide" data-name="Pip" data-location="Hillcrest" >
+                <img src="images/Image (5).jfif" alt="Pip - blanco"/>
+                <figcaption></figcaption>
+              </figure>
+              <figure class="slide" data-name="Nori" data-location="Oakwood">
+                <img src="images/Image.jfif" alt="Nori - atigrado"/>
+                <figcaption></figcaption>
+              </figure>
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next slide">›</button>
+
+          <div class="carousel-footer">
+            <div class="dots" role="tablist" aria-label="Slide indicators"></div>
+            <div class="card-actions">
+              <button class="btn" id="share-slide" data-i18n="share_slide">Compartir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-card container">
+      <h4 data-i18n="contact_heading">Contacto</h4>
+        <div class="contact-body">
+        <p data-i18n-html="contact_paragraph">Por favor envíame un mensaje cuando veas o encuentres a Mashu. Realmente aprecio tu ayuda.</p>
+        <div class="contact-actions">
+          <a class="btn" href="tel:+8611265950" data-i18n="contact_phone">Llamar: 8611265950</a>
+          <a class="btn ghost" href="mailto:coram7056@gmail.com" data-i18n="contact_email">Email: coram7056@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small data-i18n="footer_small">Hecho con cuidado • Mantén un ojo en los gatos del vecindario</small>
+    </div>
+  </footer>
+
+  <!-- History modal + envelope animation -->
+  <div id="history-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="history-title">
+      <button class="modal-close" id="history-close" aria-label="Close">✕</button>
+      <div class="envelope-wrap">
+        <div class="envelope">
+          <div class="flap"></div>
+          <div class="letter" id="letter">
+              <div class="letter-inner">
+              <h2 id="history-title" data-i18n="history_title">Mi historia del gato</h2>
+              <p id="history-paragraph" data-i18n-html="history_paragraph">Aquí va la historia de tu gato: dónde nació, costumbres, lugares favoritos, última vez visto y notas importantes. Puedes personalizar este texto con la historia completa de tu mascota.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Share modal -->
+  <div id="share-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="share-title" style="max-width:420px;padding:18px">
+      <button class="modal-close" id="share-close" aria-label="Close">✕</button>
+      <h3 id="share-title" data-i18n="share_modal_title">Compartir</h3>
+      <p id="share-desc" data-i18n="share_modal_desc">Comparte esta página o las fotos visibles de Mashu con tus vecinos.</p>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn" id="share-site-btn" data-i18n="share_page_btn">Compartir página</button>
+        <button class="btn ghost" id="copy-link-btn" data-i18n="copy_link_btn">Copiar enlace</button>
+      </div>
+      <div style="margin-top:10px">
+        <button class="btn" id="share-cards-btn" data-i18n="share_cards_btn">Compartir fotos visibles</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
